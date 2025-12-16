@@ -38,5 +38,5 @@ jobs:
 
       - name: Sync build to S3
         run: |
-          aws s3 sync frontend/build s3://aws-demo-frontend \
+          aws s3 sync frontend/dist s3://aws-demo-frontend \
             --delete
