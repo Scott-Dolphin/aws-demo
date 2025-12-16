@@ -10,7 +10,7 @@ jobs:
 
     env:
       AWS_REGION: us-west-2
-      S3_bucket: aws-demo
+      S3_bucket: cpsc465-aws-demo-frontend
 
     steps:
       - name: Checkout
@@ -38,5 +38,5 @@ jobs:
 
       - name: Sync build to S3
         run: |
-          aws s3 sync frontend/dist s3://aws-demo-frontend \
+          aws s3 sync frontend/dist s3://cpsc465-aws-demo-frontend \
             --delete
