@@ -38,6 +38,5 @@ jobs:
 
       - name: Sync build to S3
         run: |
-          aws s3 sync ./build s3://$S3_Bucket \
-            --delete \
-            --cache-control "public, max-age=300"
+          aws s3 sync frontend/build s3://aws-demo-frontend \
+            --delete
